@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人记账本</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>每日记账</h1>
+    
+    <!-- 输入表单 -->
+    <div class="input-section">
+      <select id="type">
+        <option value="income">收入</option>
+        <option value="expense">支出</option>
+      </select>
+      <input type="number" id="amount" placeholder="金额">
+      <select id="category">
+        <option value="food">餐饮</option>
+        <option value="transport">交通</option>
+        <option value="shopping">购物</option>
+        <option value="salary">工资</option>
+      </select>
+      <input type="date" id="date" value="2025-02-22">
+      <button onclick="addRecord()">添加记录</button>
+    </div>
+
+    <!-- 统计面板 -->
+    <div class="stats">
+      <div>总收入：<span id="total-income">0</span></div>
+      <div>总支出：<span id="total-expense">0</span></div>
+      <div>当前结余：<span id="balance">0</span></div>
+    </div>
+
+    <!-- 记录列表 -->
+    <div class="records" id="records"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
